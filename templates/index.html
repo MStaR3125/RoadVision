@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Vision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="icon">👁️</span>
+                <h1>Road Vision <span class="accent">AI</span></h1>
+            </div>
+            <div class="status-pill" id="systemStatus">System Ready</div>
+        </header>
+
+        <main>
+            <div class="video-section">
+                <div class="video-container" id="videoContainer">
+                    <div class="upload-overlay" id="uploadOverlay">
+                        <div class="upload-content">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <h3>Drop Video Here</h3>
+                            <p>or click to browse</p>
+                            <input type="file" id="fileInput" accept=".mp4,.avi,.mov" hidden>
+                        </div>
+                    </div>
+                    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>Initializing AI Models...</p>
+                    </div>
+                    <img id="videoStream" src="" alt="Video Feed" style="display: none;">
+                </div>
+            </div>
+
+            <aside class="dashboard">
+                <div class="metric-card">
+                    <h3>Lane Offset</h3>
+                    <div class="value-group">
+                        <span class="value" id="offsetValue">0.00</span>
+                        <span class="unit">m</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="fill" id="offsetBar"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Curvature</h3>
+                    <div class="value-group">
+                        <span class="value" id="curvatureValue">0</span>
+                        <span class="unit">m</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>FPS</h3>
+                    <div class="value-group">
+                        <span class="value" id="fpsValue">0.0</span>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Detected Signs</h3>
+                    <div class="signs-list" id="signsList">
+                        <!-- Signs will appear here -->
+                        <span class="placeholder">No signs detected</span>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+JOB FAILED: module 'config' has no attribute 'DT'
+Traceback (most recent call last):
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\main.py", line 45, in process_video_task
+    processor.process_video(input_path, output_path, update_progress)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 36, in process_video
+    self.initialize()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 27, in initialize
+    self.lane_predictor = LanePredictor()
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\lane_predictor.py", line 14, in __init__
+    self.F[0:6, 6:12] = np.eye(6) * config.DT  # Position = position + velocity * dt
+                                    ^^^^^^^^^
+AttributeError: module 'config' has no attribute 'DT'
+JOB FAILED: module 'config' has no attribute 'DT'
+Traceback (most recent call last):
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\main.py", line 45, in process_video_task
+    processor.process_video(input_path, output_path, update_progress)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 36, in process_video
+    self.initialize()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 27, in initialize
+    self.lane_predictor = LanePredictor()
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\lane_predictor.py", line 14, in __init__
+    self.F[0:6, 6:12] = np.eye(6) * config.DT  # Position = position + velocity * dt
+                                    ^^^^^^^^^
+AttributeError: module 'config' has no attribute 'DT'
+JOB FAILED: module 'backend.config' has no attribute 'INITIAL_UNCERTAINTY'
+Traceback (most recent call last):
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\main.py", line 45, in process_video_task
+    processor.process_video(input_path, output_path, update_progress)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 36, in process_video
+    self.initialize()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 27, in initialize
+    self.lane_predictor = LanePredictor()
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\lane_predictor.py", line 27, in __init__
+    self.P = np.eye(self.n_states) * config.INITIAL_UNCERTAINTY
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'backend.config' has no attribute 'INITIAL_UNCERTAINTY'
+JOB FAILED: module 'backend.config' has no attribute 'INITIAL_UNCERTAINTY'
+Traceback (most recent call last):
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\main.py", line 45, in process_video_task
+    processor.process_video(input_path, output_path, update_progress)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 36, in process_video
+    self.initialize()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\processor.py", line 27, in initialize
+    self.lane_predictor = LanePredictor()
+                          ~~~~~~~~~~~~~^^
+  File "C:\Users\micro\OneDrive\Desktop\mini-road-sign-detector\backend\lane_predictor.py", line 27, in __init__
+    self.P = np.eye(self.n_states) * config.INITIAL_UNCERTAINTY
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'backend.config' has no attribute 'INITIAL_UNCERTAINTY'

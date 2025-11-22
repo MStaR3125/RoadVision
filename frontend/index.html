@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Vision Enterprise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">🚗</div>
+                <span>Road Vision <span class="badge">v1.0</span></span>
+            </div>
+
+            <nav>
+                <a href="#" class="active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Dashboard
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="top-bar">
+                <div></div>
+                <div class="user-profile">
+                    <div class="avatar">A</div>
+                    <span>Admin User</span>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Upload Section -->
+                <div class="card upload-card">
+                    <h3>New Analysis</h3>
+                    <div class="dropzone" id="dropzone">
+                        <div class="dropzone-content">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <p>Drag & Drop Video File</p>
+                            <button class="btn-primary" onclick="document.getElementById('fileInput').click()">Browse
+                                Files</button>
+                            <input type="file" id="fileInput" accept="video/*" hidden>
+                        </div>
+                        <div class="upload-progress" id="uploadProgress" style="display: none;">
+                            <div class="progress-info">
+                                <span id="progressText">Uploading...</span>
+                                <span id="progressPercent">0%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" id="progressBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Jobs -->
+                <div class="card jobs-card">
+                    <h3>Recent Jobs</h3>
+                    <div class="jobs-list" id="jobsList">
+                        <div class="empty-state">No jobs yet</div>
+                    </div>
+                </div>
+
+                <!-- Result Preview -->
+                <div class="card result-card">
+                    <h3>Analysis Result</h3>
+                    <div class="video-wrapper">
+                        <video id="resultVideo" controls style="display: none;"></video>
+                        <div class="placeholder-video" id="videoPlaceholder">
+                            <span>Select a completed job to view results</span>
+                        </div>
+
+                        <!-- Overlay Legend (Top-Left Corner) -->
+                        <div class="legend-overlay" id="legendOverlay" style="display: none;">
+                            <h4>Detection Legend</h4>
+                            <div class="legend-item">
+                                <span class="color-box high-conf"></span>
+                                <span>High Confidence</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="color-box med-conf"></span>
+                                <span>Medium Confidence</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="color-box low-conf"></span>
+                                <span>Low Confidence</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="lane-box"></span>
+                                <span>Lane Detection</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
