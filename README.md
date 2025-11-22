@@ -4,6 +4,8 @@
 
 ![Dashboard Preview](https://github.com/MStaR3125/RoadVision/tree/main/assets/placeholder-image.png)
 
+![Dashboard Preview](assets/placeholder-image.png)
+
 ## ✨ Features
 
 *   **Advanced Lane Detection**: Uses computer vision (Sobel gradients, HLS color space) and sliding window search to detect and predict lane curvature.
