@@ -2,7 +2,7 @@
 
 **Road Vision v1.0** is an enterprise-grade video analysis system designed for autonomous driving research and traffic monitoring. It features a robust FastAPI backend, asynchronous video processing, and a modern "Command Center" dashboard for visualizing lane detection, traffic sign recognition, and vehicle tracking.
 
-![Dashboard Preview](https://github.com/MStaR3125/RoadVision/assets/placeholder-image.png)
+![Dashboard Preview](https://github.com/MStaR3125/RoadVision/tree/main/assets/placeholder-image.png)
 
 ## ✨ Features
 
